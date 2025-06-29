@@ -479,7 +479,7 @@ body::before {
 /* Landscape phone optimizations */
 @media (max-width: 768px) and (orientation: landscape) {
     .header {
-        top: 3vh;
+        top: max(5vh, 30px);
     }
     
     .title {
@@ -530,8 +530,12 @@ body::before {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
+    body {
+        padding-top: max(env(safe-area-inset-top), 20px);
+    }
+    
     .header {
-        top: 6vh;
+        top: max(8vh, 60px);
         padding: 0 1rem;
     }
     
@@ -627,7 +631,7 @@ body::before {
 
 @media (max-width: 480px) {
     .header {
-        top: 4vh;
+        top: max(6vh, 40px);
     }
     
     .title {
@@ -698,7 +702,7 @@ body::before {
 
 @media (max-height: 600px) {
     .header {
-        top: 3vh;
+        top: max(4vh, 25px);
     }
     
     .game-area {
