@@ -1,18 +1,4 @@
 {
-  "version": 2,
-  "name": "perfect-circle-game",
-  "builds": [
-    {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -45,7 +31,7 @@
       ]
     },
     {
-      "source": "/(css|js|images)/**",
+      "source": "/**/*.{css,js}",
       "headers": [
         {
           "key": "Cache-Control",
