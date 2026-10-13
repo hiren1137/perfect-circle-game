@@ -289,7 +289,7 @@ body::before {
     }
     
     .controls {
-        bottom: max(8vh, 60px);
+        bottom: max(10vh, 80px);
     }
 }
 
@@ -424,7 +424,7 @@ body::before {
 /* Keyboard hint */
 .keyboard-hint {
     position: fixed;
-    bottom: 3rem;
+    bottom: 3.8rem;
     left: 50%;
     transform: translateX(-50%);
     color: var(--text-gray);
@@ -448,8 +448,35 @@ body::before {
     display: none;
 }
 
+/* Footer / Badge */
 .footer {
-    display: none;
+    position: fixed;
+    bottom: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a {
+    display: inline-block;
+    line-height: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer a:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.footer img {
+    height: auto;
+    max-height: 40px;
+    width: auto;
+    max-width: 180px;
+    display: block;
 }
 
 /* Screen reader only content */
@@ -579,8 +606,17 @@ body::before {
         font-size: clamp(0.7rem, 1.8vmin, 0.9rem);
     }
     
+    .footer {
+        bottom: 0.6rem;
+    }
+    
+    .footer img {
+        max-height: 36px;
+        max-width: 160px;
+    }
+    
     .controls {
-        bottom: max(4vh, 40px);
+        bottom: max(6vh, 52px);
         gap: 0.6rem;
         flex-wrap: wrap;
         justify-content: center;
@@ -661,8 +697,17 @@ body::before {
         font-size: clamp(2rem, 6vmin, 3rem);
     }
     
+    .footer {
+        bottom: 0.4rem;
+    }
+    
+    .footer img {
+        max-height: 32px;
+        max-width: 135px;
+    }
+    
     .controls {
-        bottom: max(4vh, 40px);
+        bottom: max(6vh, 46px);
         gap: 0.5rem;
     }
     
